@@ -51,5 +51,4 @@ fi
 cd /share/home/liuchuandong/reann-0408/examp-reann-h2o
 
 $PYTHON_PATH -m torch.distributed.run --nproc_per_node=$NPROC_PER_NODE --nnodes=$SLURM_JOB_NUM_NODES --rdzv_id=$SLURM_JOB_ID --rdzv_backend=c10d --rdzv_endpoint=$MASTER:$id_master $COMMAND > out 2>&1
-
 echo End Time: `date`
