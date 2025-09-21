@@ -1,0 +1,48 @@
+REANN Package used for fitting energy and tensorial Property
+2025-09-18-14_44_22 
+Epoch=    0 learning rate   5.000000e-03  train error:   18.32197    2.25832 test error:   17.00507    2.26679 
+Epoch=    5 learning rate   5.000000e-03  train error:    2.41499    0.19584 test error:    1.60773    0.15742 
+Epoch=   10 learning rate   5.000000e-03  train error:    1.47775    0.12755 test error:    1.13524    0.10874 
+Epoch=   15 learning rate   5.000000e-03  train error:    1.22288    0.10897 test error:    0.99217    0.09287 
+Epoch=   20 learning rate   5.000000e-03  train error:    1.03132    0.09754 test error:    0.87020    0.08749 
+Epoch=   25 learning rate   5.000000e-03  train error:    0.86229    0.09448 test error:    0.91910    0.08608 
+Epoch=   30 learning rate   5.000000e-03  train error:    1.21125    0.10262 test error:    0.77703    0.08921 
+Epoch=   35 learning rate   5.000000e-03  train error:    0.70666    0.08869 test error:    0.72386    0.08325 
+Epoch=   40 learning rate   5.000000e-03  train error:    0.57117    0.08842 test error:    0.55095    0.08459 
+Epoch=   45 learning rate   2.500000e-03  train error:    0.49524    0.08744 test error:    0.54936    0.08325 
+Epoch=   50 learning rate   2.500000e-03  train error:    5.73884    0.56421 test error:    0.94358    0.10918 
+Epoch=   55 learning rate   2.500000e-03  train error:    0.51220    0.09118 test error:    0.61545    0.08264 
+Epoch=   60 learning rate   2.500000e-03  train error:    0.40280    0.08928 test error:    0.47197    0.08270 
+Epoch=   65 learning rate   2.500000e-03  train error:    0.35893    0.08994 test error:    0.43590    0.08298 
+Epoch=   70 learning rate   2.500000e-03  train error:    0.33379    0.08857 test error:    0.46906    0.08303 
+Epoch=   75 learning rate   2.500000e-03  train error:    0.31376    0.08864 test error:    0.44996    0.08320 
+Epoch=   80 learning rate   2.500000e-03  train error:    0.28618    0.08952 test error:    0.42907    0.08331 
+Epoch=   85 learning rate   1.250000e-03  train error:    0.27195    0.09017 test error:    0.43816    0.08668 
+Epoch=   90 learning rate   1.250000e-03  train error:    0.28503    0.09343 test error:    0.42420    0.08545 
+Epoch=   95 learning rate   1.250000e-03  train error:    0.25406    0.08929 test error:    0.41820    0.08595 
+Epoch=  100 learning rate   1.250000e-03  train error:    0.23371    0.08957 test error:    0.40317    0.08570 
+Epoch=  105 learning rate   6.250000e-04  train error:    0.22086    0.09023 test error:    0.41960    0.08723 
+Epoch=  110 learning rate   6.250000e-04  train error:    0.22166    0.09346 test error:    0.42465    0.09104 
+Epoch=  115 learning rate   6.250000e-04  train error:    0.21373    0.08968 test error:    0.39562    0.08527 
+Epoch=  120 learning rate   6.250000e-04  train error:    1.85212    0.13190 test error:    0.44791    0.08362 
+Epoch=  125 learning rate   6.250000e-04  train error:    0.20672    0.08963 test error:    0.39764    0.08489 
+Epoch=  130 learning rate   6.250000e-04  train error:    0.19072    0.09115 test error:    0.40343    0.08778 
+Epoch=  135 learning rate   6.250000e-04  train error:    0.23716    0.09512 test error:    0.40006    0.08835 
+Epoch=  140 learning rate   6.250000e-04  train error:    0.20253    0.09263 test error:    0.38371    0.08635 
+Epoch=  145 learning rate   3.125000e-04  train error:    0.19544    0.09245 test error:    0.37318    0.08778 
+Epoch=  150 learning rate   3.125000e-04  train error:    0.19863    0.09508 test error:    0.38274    0.09119 
+Epoch=  155 learning rate   3.125000e-04  train error:    0.38876    0.12100 test error:    0.51008    0.11952 
+Epoch=  160 learning rate   3.125000e-04  train error:    0.37897    0.11016 test error:    0.45172    0.10722 
+Epoch=  165 learning rate   1.562500e-04  train error:    0.30514    0.10485 test error:    0.38839    0.09589 
+Epoch=  170 learning rate   1.562500e-04  train error:    1.30823    0.23167 test error:    0.99998    0.18124 
+Epoch=  175 learning rate   1.562500e-04  train error:    0.67526    0.16930 test error:    0.76728    0.13968 
+Epoch=  180 learning rate   1.562500e-04  train error:    0.48510    0.13551 test error:    0.57088    0.14219 
+Epoch=  185 learning rate   7.812500e-05  train error:    0.55889    0.16273 test error:    0.66266    0.14205 
+Epoch=  190 learning rate   7.812500e-05  train error:    0.42423    0.13582 test error:    0.57377    0.13318 
+Epoch=  195 learning rate   7.812500e-05  train error:    0.47751    0.15185 test error:    0.53711    0.13226 
+Epoch=  200 learning rate   7.812500e-05  train error:    0.32423    0.12271 test error:    0.48490    0.12875 
+Epoch=  205 learning rate   7.812500e-05  train error:        nan        nan test error:        nan        nan 
+Epoch=  210 learning rate   3.906250e-05  train error:        nan        nan test error:        nan        nan 
+Epoch=  215 learning rate   1.953125e-05  train error:        nan        nan test error:        nan        nan 
+2025-09-18-15_50_40 
+terminated normal

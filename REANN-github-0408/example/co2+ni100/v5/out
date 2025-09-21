@@ -1,0 +1,193 @@
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+name                                                    type                 input      output     num_params  
+density.ocmod.memssage_0.elemental_nets.O.0             Linear               84         64         5,440       
+density.ocmod.memssage_0.elemental_nets.O.1.resblock.0  Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.O.1.resblock.1  LayerNorm            64         64         128         
+density.ocmod.memssage_0.elemental_nets.O.1.resblock.2  Linear               64         64         4,160       
+density.ocmod.memssage_0.elemental_nets.O.1.resblock.3  Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.O.1.resblock.4  LayerNorm            64         64         128         
+density.ocmod.memssage_0.elemental_nets.O.1.resblock.5  Linear               64         64         4,160       
+density.ocmod.memssage_0.elemental_nets.O.2             Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.O.3             Linear               64         7          455         
+density.ocmod.memssage_0.elemental_nets.C.0             Linear               84         64         5,440       
+density.ocmod.memssage_0.elemental_nets.C.1.resblock.0  Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.C.1.resblock.1  LayerNorm            64         64         128         
+density.ocmod.memssage_0.elemental_nets.C.1.resblock.2  Linear               64         64         4,160       
+density.ocmod.memssage_0.elemental_nets.C.1.resblock.3  Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.C.1.resblock.4  LayerNorm            64         64         128         
+density.ocmod.memssage_0.elemental_nets.C.1.resblock.5  Linear               64         64         4,160       
+density.ocmod.memssage_0.elemental_nets.C.2             Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.C.3             Linear               64         7          455         
+density.ocmod.memssage_0.elemental_nets.Ni.0            Linear               84         64         5,440       
+density.ocmod.memssage_0.elemental_nets.Ni.1.resblock.0 Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.Ni.1.resblock.1 LayerNorm            64         64         128         
+density.ocmod.memssage_0.elemental_nets.Ni.1.resblock.2 Linear               64         64         4,160       
+density.ocmod.memssage_0.elemental_nets.Ni.1.resblock.3 Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.Ni.1.resblock.4 LayerNorm            64         64         128         
+density.ocmod.memssage_0.elemental_nets.Ni.1.resblock.5 Linear               64         64         4,160       
+density.ocmod.memssage_0.elemental_nets.Ni.2            Relu_like            64         64         128         
+density.ocmod.memssage_0.elemental_nets.Ni.3            Linear               64         7          455         
+density.ocmod.memssage_1.elemental_nets.O.0             Linear               84         64         5,440       
+density.ocmod.memssage_1.elemental_nets.O.1.resblock.0  Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.O.1.resblock.1  LayerNorm            64         64         128         
+density.ocmod.memssage_1.elemental_nets.O.1.resblock.2  Linear               64         64         4,160       
+density.ocmod.memssage_1.elemental_nets.O.1.resblock.3  Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.O.1.resblock.4  LayerNorm            64         64         128         
+density.ocmod.memssage_1.elemental_nets.O.1.resblock.5  Linear               64         64         4,160       
+density.ocmod.memssage_1.elemental_nets.O.2             Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.O.3             Linear               64         7          455         
+density.ocmod.memssage_1.elemental_nets.C.0             Linear               84         64         5,440       
+density.ocmod.memssage_1.elemental_nets.C.1.resblock.0  Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.C.1.resblock.1  LayerNorm            64         64         128         
+density.ocmod.memssage_1.elemental_nets.C.1.resblock.2  Linear               64         64         4,160       
+density.ocmod.memssage_1.elemental_nets.C.1.resblock.3  Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.C.1.resblock.4  LayerNorm            64         64         128         
+density.ocmod.memssage_1.elemental_nets.C.1.resblock.5  Linear               64         64         4,160       
+density.ocmod.memssage_1.elemental_nets.C.2             Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.C.3             Linear               64         7          455         
+density.ocmod.memssage_1.elemental_nets.Ni.0            Linear               84         64         5,440       
+density.ocmod.memssage_1.elemental_nets.Ni.1.resblock.0 Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.Ni.1.resblock.1 LayerNorm            64         64         128         
+density.ocmod.memssage_1.elemental_nets.Ni.1.resblock.2 Linear               64         64         4,160       
+density.ocmod.memssage_1.elemental_nets.Ni.1.resblock.3 Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.Ni.1.resblock.4 LayerNorm            64         64         128         
+density.ocmod.memssage_1.elemental_nets.Ni.1.resblock.5 Linear               64         64         4,160       
+density.ocmod.memssage_1.elemental_nets.Ni.2            Relu_like            64         64         128         
+density.ocmod.memssage_1.elemental_nets.Ni.3            Linear               64         7          455         
+density.ocmod.memssage_2.elemental_nets.O.0             Linear               84         64         5,440       
+density.ocmod.memssage_2.elemental_nets.O.1.resblock.0  Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.O.1.resblock.1  LayerNorm            64         64         128         
+density.ocmod.memssage_2.elemental_nets.O.1.resblock.2  Linear               64         64         4,160       
+density.ocmod.memssage_2.elemental_nets.O.1.resblock.3  Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.O.1.resblock.4  LayerNorm            64         64         128         
+density.ocmod.memssage_2.elemental_nets.O.1.resblock.5  Linear               64         64         4,160       
+density.ocmod.memssage_2.elemental_nets.O.2             Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.O.3             Linear               64         7          455         
+density.ocmod.memssage_2.elemental_nets.C.0             Linear               84         64         5,440       
+density.ocmod.memssage_2.elemental_nets.C.1.resblock.0  Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.C.1.resblock.1  LayerNorm            64         64         128         
+density.ocmod.memssage_2.elemental_nets.C.1.resblock.2  Linear               64         64         4,160       
+density.ocmod.memssage_2.elemental_nets.C.1.resblock.3  Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.C.1.resblock.4  LayerNorm            64         64         128         
+density.ocmod.memssage_2.elemental_nets.C.1.resblock.5  Linear               64         64         4,160       
+density.ocmod.memssage_2.elemental_nets.C.2             Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.C.3             Linear               64         7          455         
+density.ocmod.memssage_2.elemental_nets.Ni.0            Linear               84         64         5,440       
+density.ocmod.memssage_2.elemental_nets.Ni.1.resblock.0 Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.Ni.1.resblock.1 LayerNorm            64         64         128         
+density.ocmod.memssage_2.elemental_nets.Ni.1.resblock.2 Linear               64         64         4,160       
+density.ocmod.memssage_2.elemental_nets.Ni.1.resblock.3 Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.Ni.1.resblock.4 LayerNorm            64         64         128         
+density.ocmod.memssage_2.elemental_nets.Ni.1.resblock.5 Linear               64         64         4,160       
+density.ocmod.memssage_2.elemental_nets.Ni.2            Relu_like            64         64         128         
+density.ocmod.memssage_2.elemental_nets.Ni.3            Linear               64         7          455         
+nnmod.elemental_nets.O.0                                Linear               84         64         5,440       
+nnmod.elemental_nets.O.1.resblock.0                     Relu_like            64         64         128         
+nnmod.elemental_nets.O.1.resblock.1                     LayerNorm            64         64         128         
+nnmod.elemental_nets.O.1.resblock.2                     Linear               64         64         4,160       
+nnmod.elemental_nets.O.1.resblock.3                     Relu_like            64         64         128         
+nnmod.elemental_nets.O.1.resblock.4                     LayerNorm            64         64         128         
+nnmod.elemental_nets.O.1.resblock.5                     Linear               64         64         4,160       
+nnmod.elemental_nets.O.2                                Relu_like            64         64         128         
+nnmod.elemental_nets.O.3                                Linear               64         1          65          
+nnmod.elemental_nets.C.0                                Linear               84         64         5,440       
+nnmod.elemental_nets.C.1.resblock.0                     Relu_like            64         64         128         
+nnmod.elemental_nets.C.1.resblock.1                     LayerNorm            64         64         128         
+nnmod.elemental_nets.C.1.resblock.2                     Linear               64         64         4,160       
+nnmod.elemental_nets.C.1.resblock.3                     Relu_like            64         64         128         
+nnmod.elemental_nets.C.1.resblock.4                     LayerNorm            64         64         128         
+nnmod.elemental_nets.C.1.resblock.5                     Linear               64         64         4,160       
+nnmod.elemental_nets.C.2                                Relu_like            64         64         128         
+nnmod.elemental_nets.C.3                                Linear               64         1          65          
+nnmod.elemental_nets.Ni.0                               Linear               84         64         5,440       
+nnmod.elemental_nets.Ni.1.resblock.0                    Relu_like            64         64         128         
+nnmod.elemental_nets.Ni.1.resblock.1                    LayerNorm            64         64         128         
+nnmod.elemental_nets.Ni.1.resblock.2                    Linear               64         64         4,160       
+nnmod.elemental_nets.Ni.1.resblock.3                    Relu_like            64         64         128         
+nnmod.elemental_nets.Ni.1.resblock.4                    LayerNorm            64         64         128         
+nnmod.elemental_nets.Ni.1.resblock.5                    Linear               64         64         4,160       
+nnmod.elemental_nets.Ni.2                               Relu_like            64         64         128         
+nnmod.elemental_nets.Ni.3                               Linear               64         1          65          
+total_para:184209
+/share/home/liuchuandong/reann-0408/REANN-github-0408/src/LKF.py:179: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3571.)
+  tmp = param.data.T.contiguous().reshape(param.data.nelement(), 1)
+Traceback (most recent call last):
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/share/home/liuchuandong/reann-0408/REANN-github-0408/__main__.py", line 1, in <module>
+    import run.train
+  File "/share/home/liuchuandong/reann-0408/REANN-github-0408/run/train.py", line 148, in <module>
+    Optimize_KF(fout,prop_ceff,nprop,train_nele,test_nele,lr,init_f,final_f,decay_factor,start_lr,end_lr,patience_epoch,print_epoch,Epoch,\
+  File "/share/home/liuchuandong/reann-0408/REANN-github-0408/src/optimize_KF.py", line 95, in Optimize_KF
+    restart(Prop_class,"REANN.pth")
+  File "/share/home/liuchuandong/reann-0408/REANN-github-0408/src/restart.py", line 7, in __call__
+    self.forward(model,checkfile)
+  File "/share/home/liuchuandong/reann-0408/REANN-github-0408/src/restart.py", line 16, in forward
+    self.optim.load_state_dict(checkpoint['optimizer'])
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/optim/optimizer.py", line 379, in load_state_dict
+    state_dict = deepcopy(state_dict)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 205, in _deepcopy_list
+    append(deepcopy(a, memo))
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/_tensor.py", line 118, in __deepcopy__
+    new_storage = self._typed_storage()._deepcopy(memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/storage.py", line 661, in _deepcopy
+    return self._new_wrapped_storage(copy.deepcopy(self._untyped_storage, memo))
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/copy.py", line 153, in deepcopy
+    y = copier(memo)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/storage.py", line 98, in __deepcopy__
+    new_storage = self.clone()
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/storage.py", line 112, in clone
+    return type(self)(self.nbytes(), device=self.device).copy_(self)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 800.00 MiB (GPU 0; 39.39 GiB total capacity; 37.62 GiB already allocated; 778.38 MiB free; 38.00 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 3500842) of binary: /share/home/liuchuandong/.conda/envs/reann/bin/python
+Traceback (most recent call last):
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/distributed/run.py", line 798, in <module>
+    main()
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/distributed/run.py", line 794, in main
+    run(args)
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/share/home/liuchuandong/.conda/envs/reann/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/share/home/liuchuandong/reann-0408/REANN-github-0408/ FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-09-20_10:01:39
+  host      : g04.hpc.com
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3500842)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

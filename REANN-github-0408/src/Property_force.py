@@ -22,5 +22,6 @@ class Property(torch.nn.Module):
         grad_outputs=torch.ones(numatoms.shape[0],device=cart.device)
         force=-torch.autograd.grad(varene,cart,grad_outputs=grad_outputs,\
         create_graph=create_graph,only_inputs=True,allow_unused=True)[0].view(numatoms.shape[0],-1)
+        #[B, N_max * 3]
         return varene,force
 

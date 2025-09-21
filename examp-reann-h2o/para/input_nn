@@ -8,7 +8,7 @@
   table_init = 0              # 1 used for load parameters from pth 
   nkpoint=1                      # number of nkpoint NNs was employed to representation polarizability
 # NN epoch and NN optimize parameters
-  Epoch=400000                    # max iterations epoch                 
+  Epoch=4000                    # max iterations epoch                 
   patience_epoch = 100            # pre initial learning rate epoch   
   decay_factor = 0.5             # Factor by which the learning rate will be reduced. new_lr = lr * factor.
   start_lr = 0.005               # initial learning rate
@@ -38,4 +38,4 @@
      oc_table_norm=True
      oc_loop=0
 #========================floder used to save the data========================
-  floder="/public/home/dat-share/xjf/reann-0408/examp-reann-h2o/data-h2o/"
+  floder="/share/home/liuchuandong/reann-0408/examp-reann-h2o/data-h2o/"

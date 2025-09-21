@@ -1,0 +1,43 @@
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+density.rs
+density.inta
+density.params
+density.hyper
+nnmod.elemental_nets.O.0.weight
+nnmod.elemental_nets.O.0.bias
+nnmod.elemental_nets.O.1.resblock.0.alpha
+nnmod.elemental_nets.O.1.resblock.0.beta
+nnmod.elemental_nets.O.1.resblock.1.weight
+nnmod.elemental_nets.O.1.resblock.1.bias
+nnmod.elemental_nets.O.1.resblock.2.weight
+nnmod.elemental_nets.O.1.resblock.2.bias
+nnmod.elemental_nets.O.1.resblock.3.alpha
+nnmod.elemental_nets.O.1.resblock.3.beta
+nnmod.elemental_nets.O.1.resblock.4.weight
+nnmod.elemental_nets.O.1.resblock.4.bias
+nnmod.elemental_nets.O.1.resblock.5.weight
+nnmod.elemental_nets.O.1.resblock.5.bias
+nnmod.elemental_nets.O.2.alpha
+nnmod.elemental_nets.O.2.beta
+nnmod.elemental_nets.O.3.weight
+nnmod.elemental_nets.O.3.bias
+nnmod.elemental_nets.H.0.weight
+nnmod.elemental_nets.H.0.bias
+nnmod.elemental_nets.H.1.resblock.0.alpha
+nnmod.elemental_nets.H.1.resblock.0.beta
+nnmod.elemental_nets.H.1.resblock.1.weight
+nnmod.elemental_nets.H.1.resblock.1.bias
+nnmod.elemental_nets.H.1.resblock.2.weight
+nnmod.elemental_nets.H.1.resblock.2.bias
+nnmod.elemental_nets.H.1.resblock.3.alpha
+nnmod.elemental_nets.H.1.resblock.3.beta
+nnmod.elemental_nets.H.1.resblock.4.weight
+nnmod.elemental_nets.H.1.resblock.4.bias
+nnmod.elemental_nets.H.1.resblock.5.weight
+nnmod.elemental_nets.H.1.resblock.5.bias
+nnmod.elemental_nets.H.2.alpha
+nnmod.elemental_nets.H.2.beta
+nnmod.elemental_nets.H.3.weight
+nnmod.elemental_nets.H.3.bias
+/share/home/liuchuandong/reann-0408/REANN-github-0408/src/LKF.py:179: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3571.)
+  tmp = param.data.T.contiguous().reshape(param.data.nelement(), 1)

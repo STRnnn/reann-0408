@@ -39,4 +39,4 @@
      oc_table_norm=True
      oc_loop=4
 #========================floder used to save the data========================
-  floder="./"  # data can be found in repo "https://github.com/zhangylch/Learning-Dipole-Moments-and-Polarizabilities"
+  floder="/share/home/liuchuandong/reann-0408/REANN-github-0408/example/NMA/"  # data can be found in repo "https://github.com/zhangylch/Learning-Dipole-Moments-and-Polarizabilities"

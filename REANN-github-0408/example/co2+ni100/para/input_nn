@@ -9,7 +9,7 @@
   table_init = 0             # 1 used for load parameters from pth 
   nkpoint=1                      # number of nkpoint NNs was employed to representation polarizability
 # NN epoch and NN optimize parameters
-  Epoch=20000                    # max iterations epoch                 
+  Epoch=2000                    # max iterations epoch                 
   patience_epoch = 200            # pre initial learning rate epoch   
   decay_factor = 0.5             # Factor by which the learning rate will be reduced. new_lr = lr * factor.
   start_lr = 0.001               # initial learning rate
@@ -39,4 +39,4 @@
      oc_table_norm=True
      oc_loop=3
 #========================floder used to save the data========================
-  floder="/home/home/zyl/pytorch/2021_9_5/data/co2+ni100/"
+  floder="/share/home/liuchuandong/reann-0408/REANN-github-0408/example/co2+ni100/"
