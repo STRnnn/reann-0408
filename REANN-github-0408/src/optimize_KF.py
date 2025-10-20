@@ -14,7 +14,7 @@ data_train,data_test,Prop_class,loss_fn,optim,restart,PES_Normal,device,PES_Lamm
 
     rank=dist.get_rank()
     best_loss=1e30*torch.ones(1,device=device)    
-    patience=30
+    patience=20
     for iepoch in range(Epoch): 
         # set the model to train
        Prop_class.train()
@@ -33,7 +33,6 @@ data_train,data_test,Prop_class,loss_fn,optim,restart,PES_Normal,device,PES_Lamm
 
           loss = loss_fn((Etot_pred,Force_pred),ab_list)
           lossprop+=loss.detach()
-          loss=torch.sum(torch.mul(loss,prop_ceff[0:nprop]))
     
        #  print the error of vailadation and test each print_epoch
     #    if np.mod(iepoch,print_epoch)==0:
@@ -76,7 +75,7 @@ data_train,data_test,Prop_class,loss_fn,optim,restart,PES_Normal,device,PES_Lamm
           #  save the best model
           if loss<best_loss[0]:
              best_loss[0]=loss
-             patience=30
+             patience=20
              if rank == 0:
                  state = {'reannparam': Prop_class.state_dict(), 'optimizer': optim.state_dict()}
                  torch.save(state, "./REANN.pth")
@@ -87,14 +86,19 @@ data_train,data_test,Prop_class,loss_fn,optim,restart,PES_Normal,device,PES_Lamm
              patience-=1
              if patience==0:
                 lr=lr*decay_factor
-                patience=30
+                patience=20
           # restore the model for continue training
           # ema.restore()
           # back to the best error
           if loss>25*best_loss[0] or loss.isnan():
               restart(Prop_class,"REANN.pth")
+              optim.zero_grad()
+              KFOptWrapper = KFOptimizerWrapper(
+                  Prop_class, optim, atoms_selected=24, atoms_per_group=6, epoch=iepoch, is_distributed=False, distributed_backend="torch"
+              )
         #       optim.param_groups[0]["lr"]=optim.param_groups[0]["lr"]*decay_factor
               lr=lr*decay_factor
+              patience=20
           if rank==0:
               lossprop=torch.sqrt(lossprop.detach().cpu()/test_nele)
               fout.write('{} '.format("test error:"))
@@ -103,4 +107,36 @@ data_train,data_test,Prop_class,loss_fn,optim,restart,PES_Normal,device,PES_Lamm
               # if stop criterion
               fout.write("\n")
               fout.flush()
-          if lr<end_lr: break
+          
+          #final result 
+          if lr<=end_lr: 
+            restart(Prop_class,"REANN.pth")
+            Prop_class.eval()
+            #final result of train
+            lossprop=torch.zeros(nprop,device=device)
+            for data in data_train:
+                abProp,cart,numatoms,species,atom_index,shifts=data
+                loss=loss_fn(Prop_class(cart,numatoms,species,atom_index,shifts,create_graph=False),abProp)
+                lossprop+=loss.detach()
+            if rank==0:
+                lossprop=torch.sqrt(lossprop.detach().cpu()/train_nele)
+                fout.write('{} '.format(" final train error:"))
+                for error in lossprop:
+                    fout.write('{:10.5f} '.format(error))
+                fout.write("\n")
+                fout.flush()
+            #final result of test
+            lossprop=torch.zeros(nprop,device=device)
+            for data in data_test:
+                abProp,cart,numatoms,species,atom_index,shifts=data
+                loss=loss_fn(Prop_class(cart,numatoms,species,atom_index,shifts,\
+                create_graph=False),abProp)
+                lossprop+=loss.detach()
+            if rank==0:
+                lossprop=torch.sqrt(lossprop.detach().cpu()/test_nele)
+                fout.write('{} '.format(" final test error:"))
+                for error in lossprop:
+                    fout.write('{:10.5f} '.format(error))
+                fout.write("\n")
+                fout.flush()
+            break

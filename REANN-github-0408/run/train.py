@@ -90,40 +90,66 @@ if world_size>1:
 #define the loss function
 loss_fn=Loss()
 
-#define optimizer
-#optim=torch.optim.AdamW(Prop_class.parameters(), lr=start_lr, weight_decay=re_ceff)
-optim=LKFOptimizer(Prop_class.parameters(), kalman_lambda=0.98, kalman_nue=0.9987, block_size=14855) 
-#blocksize h2o:4081,co2:14855
+if optimizer=='AdamW':
+    #define optimizer
+    optim=torch.optim.AdamW(Prop_class.parameters(), lr=start_lr, weight_decay=re_ceff)
 
-# learning rate scheduler
-# scheduler=torch.optim.lr_scheduler.ReduceLROnPlateau(optim,factor=decay_factor,patience=patience_epoch,min_lr=end_lr)
- 
-#define the restart
-restart=Restart(optim)
+    #learning rate scheduler
+    scheduler=torch.optim.lr_scheduler.ReduceLROnPlateau(optim,factor=decay_factor,patience=patience_epoch,min_lr=end_lr)
 
-# load the model from EANN.pth
-lr = start_lr
-if table_init == 1:
-    restart(Prop_class, "REANN.pth")
-    nnmod.initpot[0] = initpot
-    if hasattr(optim, 'param_groups') and len(optim.param_groups) > 0:
-        lr = optim.param_groups[0]["lr"]
-        lr = max(min(lr, start_lr), end_lr)
-    f_ceff=init_f+(final_f-init_f)*(lr-start_lr)/(end_lr-start_lr+1e-8)
-    prop_ceff[1]=f_ceff
+    #define the restart
+    restart=Restart(optim)
 
-#ema = EMA(Prop_class, 0.999)
-#==========================================================
-if dist.get_rank()==0:
-    fout.write(time.strftime("%Y-%m-%d-%H_%M_%S \n", time.localtime()))
-    fout.flush()
-    for name, m in Prop_class.named_parameters():
-        print(name)
-#==========================================================
-# Optimize(fout,prop_ceff,nprop,train_nele,test_nele,init_f,final_f,decay_factor,start_lr,end_lr,print_epoch,Epoch,\
-# data_train,data_test,Prop_class,loss_fn,optim,scheduler,ema,restart,PES_Normal,device,PES_Lammps=PES_Lammps)
-Optimize_KF(fout,prop_ceff,nprop,train_nele,test_nele,lr,init_f,final_f,decay_factor,start_lr,end_lr,patience_epoch,print_epoch,Epoch,\
+    # load the model from EANN.pth
+    lr=start_lr
+    if table_init==1:
+        restart(Prop_class,"REANN.pth")
+        nnmod.initpot[0]=initpot
+        if lr>start_lr: lr=start_lr #for restart with a learning rate 
+        if lr<end_lr: lr=start_lr #for restart with a learning rate 
+        f_ceff=init_f+(final_f-init_f)*(lr-start_lr)/(end_lr-start_lr+1e-8)
+        prop_ceff[1]=f_ceff
+
+    ema = EMA(Prop_class, 0.999)
+    #==========================================================
+    if dist.get_rank()==0:
+        fout.write(time.strftime("%Y-%m-%d-%H_%M_%S \n", time.localtime()))
+        fout.flush()
+        for name, m in Prop_class.named_parameters():
+            print(name)
+    #==========================================================
+    Optimize(fout,prop_ceff,nprop,train_nele,test_nele,init_f,final_f,decay_factor,start_lr,end_lr,print_epoch,Epoch,\
+data_train,data_test,Prop_class,loss_fn,optim,scheduler,ema,restart,PES_Normal,device,PES_Lammps=PES_Lammps)
+
+elif optimizer=='KFoptimizer':
+    #define optimizer
+    optim=LKFOptimizer(Prop_class.parameters(), kalman_lambda=kalman_lambda, kalman_nue=kalman_nue, block_size=block_size)
+
+    #define the restart
+    restart=Restart(optim)
+
+    # load the model from EANN.pth
+    lr = start_lr
+    if table_init == 1:
+        restart(Prop_class, "REANN.pth")
+        nnmod.initpot[0] = initpot
+        if lr>start_lr: lr=start_lr #for restart with a learning rate 
+        if lr<end_lr: lr=start_lr #for restart with a learning rate 
+        f_ceff=init_f+(final_f-init_f)*(lr-start_lr)/(end_lr-start_lr+1e-8)
+        prop_ceff[1]=f_ceff
+
+    #==========================================================
+    if dist.get_rank()==0:
+        fout.write(time.strftime("%Y-%m-%d-%H_%M_%S \n", time.localtime()))
+        fout.flush()
+        for name, m in Prop_class.named_parameters():
+            print(name)
+    #==========================================================
+    Optimize_KF(fout,prop_ceff,nprop,train_nele,test_nele,lr,init_f,final_f,decay_factor,start_lr,end_lr,patience_epoch,print_epoch,Epoch,\
 data_train,data_test,Prop_class,loss_fn,optim,restart,PES_Normal,device,PES_Lammps=PES_Lammps)
+
+else :
+    raise NotImplementedError("Optimizer not implemented: %s ,choose from AdamW or KFoptimizer" % optimizer)
 
 if dist.get_rank()==0:
     fout.write(time.strftime("%Y-%m-%d-%H_%M_%S \n", time.localtime()))

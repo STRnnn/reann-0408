@@ -50,6 +50,12 @@ oc_dropout_p=[0.0,0.0]
 oc_activate = 'Relu_like'          # default "Tanh_like", optional "Relu_like"
 #========================queue_size sequence for laod data into gpu
 oc_table_norm=True
+#===========optimizer ===============================================
+optimizer='AdamW'                   # AdamW or KFoptimizer
+#===========param for KFoptimizer ===============================================
+kalman_lambda=0.98                 # Kalman filter forgetting factor
+kalman_nue=0.9987                  # Kalman filter regularization parameter
+block_size=5120                    # block size for KF optimizer
 DDP_backend="nccl"
 # floder to save the data
 floder="./"

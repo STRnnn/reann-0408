@@ -37,5 +37,11 @@
    #========================queue_size sequence for laod data into gpu
      oc_table_norm=True
      oc_loop=0
+#===========optimizer ===============================================
+optimizer='AdamW'                   # AdamW or KFoptimizer
+#===========param for KFoptimizer ===============================================
+kalman_lambda=0.98
+kalman_nue=0.9987
+block_size=8000
 #========================floder used to save the data========================
-  floder="/public/home/dat-share/xjf/reann-0408/examp-reann-h2o/data-h2o/"
+  floder="/share/home/liuchuandong/reann-0408/examp-reann-h2o/data-h2o/"
